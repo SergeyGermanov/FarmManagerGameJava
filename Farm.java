@@ -5,8 +5,6 @@ import ictgradschool.industry.assignment02.farmmanager.animals.*;
 import java.util.Arrays;
 
 /**
- * This class consists of methods for the farm operations.
- *
  * @author Sergey Germanov
  */
 public class Farm {
@@ -20,9 +18,6 @@ public class Farm {
      * @param money The amount of money for starting the farm
      */
     public Farm( int money ) {
-        // TODO Task Two. Complete the constructor so that money and STARTING_MONEY are
-        // TODO initialised to the money from the constructor, and the animals array is
-        // TODO big enough to hold 10 Animal objects.
         this.money = money;
         this.STARTING_MONEY = money;
         this.animals = new Animal[10];
@@ -71,10 +66,6 @@ public class Farm {
             return false;
         }
 
-        // TODO Task Three. Go through the animals array, and add the new animal
-        // TODO to the animals array if the animals array is not already full.
-        // TODO Also, deduct the animal price from money once the new animal has been
-        // TODO added to the animals array.
 
         // Add the new animal to the array and deduct the animal price if it is not full
         for (int i = 0; i < animals.length; i++) {
@@ -159,11 +150,7 @@ public class Farm {
      * Feeds all animals of the type specified on the farm.
      */
     public void feed( String animalType ) {
-        // TODO Task Four. Go through the animals array, and feed each animal of the type specified
-        // TODO if you have enough money to feed it. When you fed an animal, don't forget to subtract
-        // TODO the cost to feed from the money you have on the farm, and call the feed method on the
-        // TODO animal.
-
+ 
         // Feeds each animal of the specified type if there is enough money to feed.
         for (int i = 0; i < animals.length; i++) {
 
@@ -184,9 +171,7 @@ public class Farm {
      * Prints information for all animals on the farm.
      */
     public void printStock() {
-        // TODO Task Six. Go through the animals array, and print information for each animal on the farm.
-        // TODO If there are no animals on the farm, simply print "No animals on the farm!"
-        // Prints the stock if array is not empty and prints "No animals..." if array is empty.
+
         boolean printed = false;
         for (int i = 0; i < animals.length; i++) {
             Animal a = animals[i];
@@ -207,9 +192,6 @@ public class Farm {
      * Harvests products from all animals that can produce products such as milk, eggs and gold nuggets.
      */
     public void harvestAll() {
-        // TODO Task Seven. Go through the animals array, and harvest the product from each animal on the farm
-        // TODO if the animal is an instance of IProductionAnimal and it is harvestable. When you have harvested an
-        // TODO animal, don't forget to increase the money you have on the farm with the money you made.
         for (int i = 0; i < animals.length; i++) {
             Animal a = animals[i];
             if (a instanceof IProductionAnimal) {
