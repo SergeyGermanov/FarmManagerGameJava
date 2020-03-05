@@ -1,10 +1,5 @@
 package ictgradschool.industry.assignment02.farmmanager.animals;
 
-/**
- * This class defines an Animal. An animal has a value, and can be fed.
- * It also has an associated cost for feeding.
- * Do not modify this class.
- */
 public abstract class Animal {
     // Value of the animal
     protected int value;
