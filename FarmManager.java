@@ -2,18 +2,10 @@ package ictgradschool.industry.assignment02.farmmanager;
 
 import ictgradschool.Keyboard;
 
-/**
- * This class consists of methods for running the Farm Manager 1964 game.
- * Simply run this class to start the game. Do not modify this class.
- */
 public class FarmManager {
     private Farm farm;
 
-    /**
-     * Construct a FarmManager object for starting the game.
-     *
-     * @param args The array of string parsed from command-line
-     */
+
     public static void main(String[] args) {
         FarmManager fm = new FarmManager();
         fm.start();
